@@ -91,12 +91,20 @@ p {
 
 /* Navbar */
 #navbar {
+  position: fixed;
+  width: 100%;
   display: flex;
   justify-content: space-between;
-  background-color: #626abf;
+  background-color: transparent;
   align-items: center;
   color: var(--color-white);
   padding: 16px;
+  transition: all var(--animaiton-duration) ease-in-out;
+}
+
+#navbar.navbar--dark {
+  background-color: #626abf;
+  padding: 8px;
 }
 
 .navbar__logo {
@@ -113,6 +121,8 @@ p {
 
 .navbar__menu {
   display: flex;
+
+  position: relative;
 }
 
 .navbar__menu__item {
@@ -143,6 +153,7 @@ p {
 #home {
   background: url("imgs/projects/home-background.png") center/cover no-repeat;
   padding: 40px;
+  padding-top: 150px;
   text-align: center;
 }
 
@@ -358,6 +369,11 @@ p {
   justify-content: center;
 }
 
+.work__projects a {
+  margin-top: 10px;
+  margin-right: 10px;
+}
+
 .project {
   position: relative;
   display: flex;
@@ -469,6 +485,10 @@ p {
     flex-grow: 1;
   }
   .work__projects .kakao {
-    width: 250px;
+    width: 60%;
+  }
+
+  .work__projects a {
+    margin-bottom: 20px;
   }
 }
